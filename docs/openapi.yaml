@@ -18,6 +18,14 @@ paths:
       summary: List all tasks
       tags:
         - Tasks
+      parameters:
+        - in: query
+          name: completed
+          schema: {
+            "type": "boolean"
+          }
+          required: false
+          description: Filter the returned tasks to only complete or incomplete tasks. Leave blank to return all tasks.
       responses:
         '200':
           description: OK
